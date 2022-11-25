@@ -14,7 +14,7 @@
     <!--<script src="script.js" type="module" defer></script>-->
     <script src="https://kit.fontawesome.com/d0f5ae02d1.js" crossorigin="anonymous"></script>
 </head>
-<body data-search="false">
+<body>
     <nav>
         <div class="links">
             <a href="index.html" title="Go to homepage"><img src="logo.svg" alt=""></a>
@@ -22,6 +22,9 @@
             <a href="#" title="About">Download</a>
             <a href="https://github.com/helloworld22-joshua" title="GitHub"><i class="fa-brands fa-github"></i></a>
             <a href="https://www.youtube.com/channel/UCz69YS9_Esq-CfD0Ewgx06Q" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search.." name="search">
         </div>
         <div class="search">
             <button onclick="toggleSearch()" title="search"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -32,8 +35,7 @@
 </body>
 <script>
     function toggleSearch() {
-        let x = document.body.dataset.search;
-        x = x === "true" ? "false" : "true";
+        document.body.dataset.search = document.body.dataset.search === "true" ? "false" : "true";
     }
 </script>
 </html>

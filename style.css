@@ -39,8 +39,18 @@ a:hover, a:focus, button:hover, button:focus {
   text-shadow: 0 0 4px #fff;
 }
 
+body[data-search=true] .links {
+  display: none;
+}
+body[data-search=true] .search-bar {
+  display: flex;
+}
+
 nav {
   display: flex;
+}
+nav i {
+  font-size: 1.8rem;
 }
 nav > * {
   display: inherit;
@@ -48,14 +58,15 @@ nav > * {
   justify-content: space-around;
   align-items: center;
 }
-nav i {
-  font-size: 1.8rem;
-}
 nav .links {
   width: 75%;
 }
 nav .links img {
   width: 3rem;
+}
+nav .search-bar {
+  display: none;
+  width: 75%;
 }
 nav .search {
   width: 25%;

@@ -43,8 +43,22 @@ a, button {
     }
 }
 
+body[data-search="true"] {
+    .links {
+        display: none;
+    }
+
+    .search-bar {
+        display: flex;
+    }
+}
+
 nav {
     display: flex;
+
+    i {
+        font-size: 1.8rem;
+    }
 
     & > * {
         display: inherit;
@@ -53,16 +67,17 @@ nav {
         align-items: center;
     }
 
-    i {
-        font-size: 1.8rem;
-    }
-
     .links {
         width: 75%;
 
         img {
             width: 3rem;
         }
+    }
+
+    .search-bar {
+        display: none;
+        width: 75%;
     }
 
     .search {
