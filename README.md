@@ -1,2 +1,2 @@
 # Gridish
-Trying out a new website design
+Trying out a new website design.

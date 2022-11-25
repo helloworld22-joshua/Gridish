@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trying out a new website design.">
+    <meta name="theme-color" content="#000"> <!--Needs theme color!-->
+    <title>Gridish</title>
+
+    <link rel="icon" type="image/x-icon" href="media/favicon.ico"> <!--Needs icon!-->
+    <link rel="apple-touch-icon" href="media/favicon.ico"> <!--Needs apple-touch-icon!-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Figtree">
+    <link rel="stylesheet" href="style.css">
+    <!--<script src="script.js" type="module" defer></script>-->
+    <script src="https://kit.fontawesome.com/d0f5ae02d1.js" crossorigin="anonymous"></script>
+</head>
+<body data-search="false">
+    <nav>
+        <div class="links">
+            <a href="index.html" title="Go to homepage"><img src="logo.svg" alt=""></a>
+            <a href="#" title="About">About</a>
+            <a href="#" title="About">Download</a>
+            <a href="https://github.com/helloworld22-joshua" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.youtube.com/channel/UCz69YS9_Esq-CfD0Ewgx06Q" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="search">
+            <button onclick="toggleSearch()" title="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </nav>
+    <main></main>
+    <footer></footer>
+</body>
+<script>
+    function toggleSearch() {
+        let x = document.body.dataset.search;
+        x = x === "true" ? "false" : "true";
+    }
+</script>
+</html>
