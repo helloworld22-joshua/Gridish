@@ -1,4 +1,3 @@
 function toggleSearch() {
-    let x = document.body.dataset.search;
-    x = x === "true" ? "false" : "true";
+    document.body.dataset.search = document.body.dataset.search === "true" ? "false" : "true";
 }

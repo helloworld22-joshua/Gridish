@@ -1,7 +1,7 @@
 :root {
   --bg-color: hsl(218, 37%, 12%);
   --txt-color: hsl(218, 8%, 97%);
-  --brdr-color: hsl(218, 27%, 24%);
+  --border: 2px solid hsl(218, 27%, 24%);
 }
 
 * {
@@ -19,30 +19,31 @@ body {
   margin: 0;
   padding: 2vh;
   gap: 2vh;
-  grid-template-rows: 2fr 10fr 1fr;
+  grid-template-rows: 3fr 20fr 2fr;
   background-color: var(--bg-color);
   color: var(--txt-color);
   font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
 }
 body > * {
-  border: 2px solid var(--brdr-color);
+  border: var(--border);
   border-radius: 50px 0;
 }
 
 a, button {
   text-decoration: none;
   color: var(--txt-color);
+  outline: none;
   transition: 0.3s ease-in-out;
 }
 a:hover, a:focus, button:hover, button:focus {
   text-shadow: 0 0 4px #fff;
 }
 
-body[data-search=true] .links {
+body[data-search=true] .links, body[data-search=true] .search .fa-search {
   display: none;
 }
-body[data-search=true] .search-bar {
+body[data-search=true] .search-box, body[data-search=true] .search .fa-xmark {
   display: flex;
 }
 
@@ -54,31 +55,59 @@ nav i {
 }
 nav > * {
   display: inherit;
+  width: 75%;
   height: 100%;
   justify-content: space-around;
   align-items: center;
 }
-nav .links {
-  width: 75%;
-}
 nav .links img {
   width: 3rem;
 }
-nav .search-bar {
+nav .search-box {
   display: none;
-  width: 75%;
+  justify-content: center;
+}
+nav .search-box .search-bar {
+  display: flex;
+  width: 80%;
+  border-bottom: var(--border);
+}
+nav .search-box .search-bar * {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+}
+nav .search-box .search-bar input[type=text] {
+  width: 100%;
+  outline: none;
+  color: var(--txt-color);
 }
 nav .search {
   width: 25%;
-  border-left: 2px solid var(--brdr-color);
+  border-left: var(--border);
 }
 nav .search button {
   background: none;
   border: none;
 }
+nav .search .fa-xmark {
+  display: none;
+}
 
 main {
-  border-radius: 0 50px;
+  display: grid;
+  grid: 3fr 1fr/3fr 1fr;
+  overflow: hidden;
+}
+main .image {
+  border-bottom: var(--border);
+}
+main .description {
+  border-left: var(--border);
+  border-bottom: var(--border);
+}
+main .buttons {
+  border-left: var(--border);
 }
 
 @container (max-width: 400px) {
